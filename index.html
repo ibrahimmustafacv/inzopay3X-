@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Inzopay - Electronic Payment Services with Ancient Egyptian Heritage</title>
+    <meta name="description" content="Professional electronic payment services for businesses, online stores, and individuals. Secure payment processing with unique ancient Egyptian-inspired design and modern technology." />
+    <meta property="og:title" content="Inzopay - Electronic Payment Services" />
+    <meta property="og:description" content="Transform your digital payment ideas into reality with our secure, Egyptian-heritage inspired payment platform." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Egyptian Theme Colors */
+            --royal-navy: hsl(213, 53%, 23%);
+            --royal-navy-light: hsl(214, 50%, 35%);
+            --pharaoh-gold: hsl(45, 78%, 51%);
+            --pharaoh-gold-dark: hsl(45, 68%, 41%);
+            --sand: hsl(45, 25%, 92%);
+            --sand-dark: hsl(45, 20%, 88%);
+            --papyrus: hsl(45, 46%, 95%);
+            --desert: hsl(215, 28%, 17%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--desert);
+            background-color: var(--sand);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--royal-navy);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background: linear-gradient(45deg, var(--royal-navy) 25%, transparent 25%, transparent 75%, var(--royal-navy) 75%, var(--royal-navy));
+            background-size: 40px 40px;
+        }
+
+        .nav {
+            position: relative;
+            z-index: 10;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--pharaoh-gold);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pharaoh-gold);
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom right, var(--royal-navy), var(--royal-navy-light), var(--desert));
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-decorations {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .pyramid {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 4rem;
+            height: 4rem;
+            background-color: var(--pharaoh-gold);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-title .highlight {
+            color: var(--pharaoh-gold);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%);
+            color: var(--royal-navy);
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px hsla(213, 53%, 23%, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px hsla(213, 53%, 23%, 0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--royal-navy);
+            text-align: center;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .section-divider {
+            width: 6rem;
+            height: 0.25rem;
+            background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%);
+            margin: 0 auto 4rem;
+            border-radius: 2px;
+        }
+
+        .bg-sand-dark {
+            background-color: var(--sand-dark);
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px hsla(213, 53%, 23%, 0.2);
+            border: 2px solid var(--pharaoh-gold);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 20px 40px hsla(213, 53%, 23%, 0.3);
+        }
+
+        .card-icon {
+            color: var(--pharaoh-gold);
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--royal-navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .card-text {
+            color: #6b7280;
+        }
+
+        /* Statistics */
+        .stat-card {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px hsla(213, 53%, 23%, 0.2);
+            border: 2px solid var(--pharaoh-gold);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--pharaoh-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Services */
+        .service-icon {
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: transform 0.3s;
+        }
+
+        .service-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: radial-gradient(circle at 25% 25%, hsla(45, 78%, 51%, 0.1) 2px, transparent 2px),
+                        radial-gradient(circle at 75% 75%, hsla(45, 78%, 51%, 0.1) 2px, transparent 2px),
+                        linear-gradient(45deg, var(--papyrus) 0%, hsl(45, 36%, 88%) 100%);
+            background-size: 50px 50px, 50px 50px, 100% 100%;
+        }
+
+        .testimonial-card {
+            background: var(--papyrus);
+            border: 2px solid var(--pharaoh-gold);
+        }
+
+        .stars {
+            display: flex;
+            color: var(--pharaoh-gold);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .author-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--royal-navy);
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--royal-navy);
+        }
+
+        .author-role {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Contact */
+        .contact-method {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 6rem;
+            height: 6rem;
+            background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            position: relative;
+            transition: transform 0.3s;
+            box-shadow: 0 10px 25px hsla(213, 53%, 23%, 0.2);
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-icon::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 4px solid var(--pharaoh-gold);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .contact-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--royal-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            color: #6b7280;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--royal-navy);
+            color: white;
+            padding: 3rem 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background: linear-gradient(45deg, var(--royal-navy) 25%, transparent 25%, transparent 75%, var(--royal-navy) 75%, var(--royal-navy));
+            background-size: 40px 40px;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--pharaoh-gold);
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--pharaoh-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--pharaoh-gold);
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--pharaoh-gold);
+            padding-top: 2rem;
+            text-align: center;
+            color: #d1d5db;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--royal-navy);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background: linear-gradient(45deg, var(--royal-navy) 25%, transparent 25%, transparent 75%, var(--royal-navy) 75%, var(--royal-navy));
+            background-size: 60px 60px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-note {
+            font-size: 0.875rem;
+            opacity: 0.75;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .grid {
+                gap: 1.5rem;
+            }
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            direction: rtl;
+        }
+
+        @media (max-width: 768px) {
+            [dir="rtl"] {
+                direction: ltr;
+            }
+        }
+
+        /* Icons (SVG) */
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .icon-lg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .icon-xl {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="4" width="4" height="16" />
+                            <rect x="14" y="4" width="4" height="16" />
+                        </svg>
+                        INZOPAY
+                    </div>
+                    <div class="nav-links">
+                        <a href="#services">Services</a>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-decorations">
+            <div class="pyramid"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Turn your digital ideas into <span class="highlight">inspiration</span> on our platform
+                </h1>
+                <p class="hero-subtitle">
+                    Get ready to transform your ideas into digital reality and embody your aspirations in our advanced digital world.
+                </p>
+                <div>
+                    <a href="https://inzopay.com/auth/sginup" class="cta-button" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                        </svg>
+                        Try FREE for 14 days
+                    </a>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.75;">No credit card required</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section bg-sand-dark">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.5rem; font-weight: bold; color: var(--royal-navy); margin-bottom: 1.5rem;">
+                        Expand Your Reach and Profits <span style="color: var(--pharaoh-gold);">Globally</span>
+                    </h2>
+                    <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem;">
+                        The Advantages of Offering Digital Products for Sale Online
+                    </p>
+                    <div class="grid grid-2">
+                        <div class="stat-card">
+                            <div class="stat-number">40,000+</div>
+                            <div class="stat-label">Users happy with our service</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">160,000+</div>
+                            <div class="stat-label">Products created by users</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Global network connectivity" 
+                         style="width: 100%; height: auto; border-radius: 0.75rem; box-shadow: 0 10px 25px hsla(213, 53%, 23%, 0.2);" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 3h12l4 6-10 13L2 9l4-6z"/>
+                    <path d="M11 3 8 9l4 13 4-13-3-6"/>
+                    <path d="M2 9h20"/>
+                </svg>
+                Core Benefits & Features
+            </h2>
+            <div class="section-divider"></div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Global reach</h3>
+                    <p class="card-text">Sell worldwide without inventory or shipping constraints.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20m8-18H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Low setup costs</h3>
+                    <p class="card-text">No physical inventory means lower startup and ongoing costs.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                            <path d="M21 3v5h-5"/>
+                            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                            <path d="M8 16H3v5"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Recurring revenue</h3>
+                    <p class="card-text">Sell memberships, subscriptions and access to generate continuous income.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Scalable sales</h3>
+                    <p class="card-text">High margins and ability to sell unlimited quantities without incremental costs.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Instant delivery</h3>
+                    <p class="card-text">Customers receive products digitally right away with no waiting.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Customer satisfaction</h3>
+                    <p class="card-text">Convenient access anywhere meets customer demand for instant gratification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section bg-sand-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10,9 9,9 8,9"/>
+                </svg>
+                How Inzopay Works
+            </h2>
+            <p style="text-align: center; font-size: 1.125rem; color: #6b7280; margin-bottom: 1rem;">Concentrate on what you do best. We'll do the rest</p>
+            <div class="section-divider"></div>
+
+            <div class="grid grid-2" style="align-items: start;">
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg style="color: var(--royal-navy); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16,8 20,8 23,11 23,16 16,16"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Create conversion-optimized checkout</h3>
+                            <p style="color: #6b7280;">You can choose the optimal design for your payment page, whether simple or fully detailed</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg style="color: var(--royal-navy); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 3v12"/>
+                                <circle cx="18" cy="6" r="3"/>
+                                <circle cx="6" cy="15" r="3"/>
+                                <path d="M18 9a9 9 0 0 1-9 9"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Payment gateway integration</h3>
+                            <p style="color: #6b7280;">Our website integrates with many payment gateways to facilitate your payment process with ease</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: linear-gradient(135deg, var(--pharaoh-gold) 0%, var(--pharaoh-gold-dark) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg style="color: var(--royal-navy); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Ensure secure automated delivery</h3>
+                            <p style="color: #6b7280;">Protect products processed by automated delivery systems with encrypted tracking and authentication.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="font-size: 1.5rem; font-weight: bold; color: var(--royal-navy); margin-bottom: 1.5rem;">We are working on providing:</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg style="color: var(--pharaoh-gold); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span style="color: #374151;">Secure payment platform</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg style="color: var(--pharaoh-gold); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span style="color: #374151;">Digital subscriptions management</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg style="color: var(--pharaoh-gold); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span style="color: #374151;">Analysis tools</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg style="color: var(--pharaoh-gold); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span style="color: #374151;">Product sales reports</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg style="color: var(--pharaoh-gold); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span style="color: #374151;">Product performance analysis</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <svg style="color: var(--pharaoh-gold); width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span style="color: #374151;">Strategic decisions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">One service to meet all needs</h2>
+            <p style="text-align: center; font-size: 1.125rem; color: #6b7280; max-width: 48rem; margin: 0 auto 4rem;">
+                Enjoy a unique experience on the Inzopay platform, which supports creative people and businesses of all sizes. 
+                Customize your experience with individual features or powerful packages available.
+            </p>
+
+            <div class="grid grid-4" style="margin-bottom: 4rem;">
+                <div style="text-align: center;">
+                    <div class="service-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h20l-2 14H4L2 3z"/>
+                            <path d="M7 13v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-5"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Anything you sell</h3>
+                    <p style="color: #6b7280;">Effortlessly expand your sales reach across platforms, amplify your online presence through your website, blog, or social media.</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div class="service-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16,8 20,8 23,11 23,16 16,16"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Fast & secure delivery</h3>
+                    <p style="color: #6b7280;">Enjoy peace of mind with our commitment to fast and secure delivery of your digital goods, regardless of order size or format.</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div class="service-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Scale your marketing</h3>
+                    <p style="color: #6b7280;">Unlock your business's growth potential with robust capabilities, effortless upsells, and automated cart recovery emails.</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div class="service-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--royal-navy); margin-bottom: 0.5rem;">Manage and analytics</h3>
+                    <p style="color: #6b7280;">Drive revenue growth through comprehensive analytics and data-driven decision-making to optimize your sales process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10,9 9,9 8,9"/>
+                </svg>
+                What Our Users Say
+            </h2>
+            <div class="section-divider"></div>
+
+            <div class="grid grid-3">
+                <div class="card testimonial-card">
+                    <div class="stars">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"Inzopay has transformed our business operations. The Egyptian-inspired design makes it memorable while the functionality is top-notch."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="author-name">Amal Wael</div>
+                            <div class="author-role">E-commerce Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="stars">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"The integration was seamless and the support team is incredibly responsive. The unique design sets us apart from competitors."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="author-name">Ahmed Hassan</div>
+                            <div class="author-role">Digital Entrepreneur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card testimonial-card">
+                    <div class="stars">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">"Outstanding platform with excellent analytics. The ancient Egyptian theme gives our brand a distinctive identity that customers love."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="author-name">Maria Rodriguez</div>
+                            <div class="author-role">Small Business Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Start Your 14 Day Free Trial</h2>
+                <p class="cta-subtitle">All the benefits you need to grow your revenue</p>
+                <div>
+                    <a href="https://inzopay.com/auth/sginup" class="cta-button" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                        </svg>
+                        Start Free Trial
+                    </a>
+                </div>
+                <p class="cta-note">No credit card required – Complete Registration in under 2 minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-sand-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                Royal Contact Seal
+            </h2>
+            <div class="section-divider"></div>
+
+            <div class="grid grid-3" style="max-width: 64rem; margin: 0 auto;">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Email Support</h3>
+                    <p class="contact-info">ibrahimmustafacv@gmail.com</p>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Phone Support</h3>
+                    <p class="contact-info">+201027714970</p>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg style="color: var(--royal-navy); width: 32px; height: 32px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="contact-title">Live Chat</h3>
+                    <p class="contact-info">24/7 Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <div class="logo" style="margin-bottom: 1rem;">
+                            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="6" y="4" width="4" height="16" />
+                                <rect x="14" y="4" width="4" height="16" />
+                            </svg>
+                            INZOPAY
+                        </div>
+                        <p style="color: #d1d5db; margin-bottom: 1rem;">
+                            Electronic payment services with ancient Egyptian heritage and modern technology.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="X (Twitter)">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Payment Processing</a></li>
+                            <li><a href="#">Digital Products</a></li>
+                            <li><a href="#">Subscriptions</a></li>
+                            <li><a href="#">Analytics</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Inzopay. All rights reserved. Built with ancient wisdom and modern technology.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll-to-section functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
